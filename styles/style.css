@@ -1,0 +1,246 @@
+body {
+  display: flex;
+  background-image: url("../magical.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.rounded-div {
+  margin: 0 50px;
+  text-align: center;
+}
+
+.rounded-div {
+  /* margin: auto; */
+  width: 600px;
+  max-width: 600px;
+  margin-top: 12.5%;
+  margin-bottom: 12.5%;
+  border-radius: 25px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-color: #bababa;
+  border-width: 1px;
+  border-style: solid;
+}
+form p {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.picker {
+  flex-shrink: 0;
+  margin-bottom: 15px;
+}
+.picker p {
+  margin-bottom: 2px;
+}
+
+.picker .clr-field button {
+  width: 22px;
+  height: 22px;
+  left: 5px;
+  right: auto;
+  border-radius: 5px;
+}
+
+.picker input {
+  padding-left: 32px;
+  width: 6.7em;
+  height: 32px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  box-sizing: border-box;
+}
+
+.form-range {
+  background-color: gray;
+}
+
+input[type="range"] {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  /*  slider progress trick  */
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* Track: webkit browsers */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px;
+  background: #ccc;
+  top: 0;
+  bottom: 10px;
+  border-radius: 16px;
+}
+
+.form-range::-webkit-slider-thumb {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  height: 15px;
+  width: 15px;
+  transform: translateY(0.195em);
+  border-radius: 50%;
+}
+
+.starts {
+  margin-left: 10px;
+}
+.ends {
+  margin-right: 10px;
+}
+
+hr {
+  margin-bottom: 30px;
+}
+input {
+  text-align: left !important;
+}
+.form-floating {
+  margin-bottom: 5px;
+}
+#texts {
+  font-size: 15px;
+}
+
+.form-outline {
+  margin-bottom: 10px;
+}
+.fs .col {
+  padding: 0px 2px !important;
+}
+.prev-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+}
+.prev {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 320px;
+  height: 320px;
+  overflow: hidden;
+  resize: both;
+  max-height: 400px;
+}
+span {
+  color: gray;
+}
+.col button,
+p button {
+  padding: 0.1em;
+  border: none;
+  background-color: transparent;
+  height: 1.6em;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+}
+button:hover,
+p button:hover {
+  background-color: #00000022 !important;
+}
+.selected {
+  background-color: #00000022 !important;
+}
+.btn-group {
+  box-shadow: none !important;
+}
+.btn-group:hover {
+  box-shadow: none !important;
+}
+.btn {
+  padding-bottom: 0px !important;
+  box-shadow: none !important;
+}
+.btn:hover {
+  background-color: var(--mdb-success) !important;
+}
+.btn span {
+  font-size: 0.7em;
+}
+.btn h2 {
+  font-size: 2em;
+}
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #0fc673;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}

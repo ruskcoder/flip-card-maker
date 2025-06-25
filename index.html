@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>EFCG | Embeddable Flip Card Generator</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" type="text/css" href="styles/coloris.min.css" />
 
@@ -27,6 +27,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
   </head>
 
   <body>
@@ -36,7 +38,7 @@
 
     <div class="rounded-div">
       <form action="">
-        <h1 style="margin-bottom: 0.5em">Card Flip Generator</h1>
+        <h1 style="margin-bottom: 0.5em">Flip Card Generator</h1>
 
         <div class="container text-center">
           <div class="row">
@@ -94,28 +96,285 @@
         </div>
         <p></p>
         <hr style="margin-bottom: 10px; margin-top: 7px" />
+
         <div class="row">
-            <p style="font-size: 1.7em">Flip Timing</p>
-          </div>
-          <div class="row">
-            <div class="col-md-auto starts">0.1s</div>
-            <div class="col">
-              <div class="range" data-mdb-range-init>
-                <input
-                  type="range"
-                  class="form-range"
-                  min="0.1"
-                  max="2.0"
-                  step="0.1"
-                  id=""
-                  value="0.6"
-                />
-              </div>
+          <p style="font-size: 1.7em">Flip Timing</p>
+        </div>
+        <div class="row">
+          <div class="col-md-auto starts">0.1s</div>
+          <div class="col">
+            <div class="range" data-mdb-range-init>
+              <input
+                type="range"
+                class="form-range"
+                min="0.1"
+                max="2.0"
+                step="0.1"
+                id=""
+                value="0.6"
+              />
             </div>
-            <div class="col-md-auto ends">2s</div>
           </div>
-          <hr style="margin-bottom: 10px; margin-top: 7px" />
+          <div class="col-md-auto ends">2s</div>
+        </div>
+        <hr style="margin-bottom: 10px; margin-top: 7px" />
+        <div class="row">
+          <p
+            style="
+              font-size: 1.7em;
+              margin-bottom: 5px;
+              text-align: left;
+              width: 100%;
+              padding-left: 15px;
+            "
+          >
+            Front
+            <button class="" id="img-front">
+              <span class="material-symbols-outlined">
+                add_photo_alternate
+              </span>
+            </button>
+          </p>
+        </div>
+
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="fronttitle"
+            placeholder=""
+            value="Front Title"
+          />
+          <label for="fronttitle">Front Title</label>
+        </div>
+
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="fronttext"
+            placeholder=""
+            value="Front Text"
+          />
+          <label for="fronttext">Front Text</label>
+        </div>
+
+        <hr style="margin-bottom: 5px; margin-top: 10px" />
+        <div class="row">
+          <p
+            style="
+              font-size: 1.7em;
+              margin-bottom: 5px;
+              text-align: left;
+              width: 100%;
+              padding-left: 15px;
+            "
+          >
+            Back
+            <button class="" id="img-back">
+              <span class="material-symbols-outlined">
+                add_photo_alternate
+              </span>
+            </button>
+          </p>
+        </div>
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="backtitle"
+            placeholder=""
+            value="Back Title"
+          />
+          <label for="backtitle">Back Title</label>
+        </div>
+
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="backtext"
+            placeholder=""
+            value="Back Text"
+          />
+          <label for="backtext">Back Text</label>
+        </div>
+        <hr style="margin-bottom: 5px; margin-top: 10px" />
+        <div class="row">
+          <p
+            style="
+              font-size: 1.7em;
+              margin-bottom: 5px;
+              text-align: left;
+              width: 100%;
+              padding-left: 15px;
+            "
+          >
+            Font Size
+          </p>
+        </div>
+
+        <div class="row fs" style="width: 100%; margin: auto">
+          <div class="col">
+            <div class="form-outline" data-mdb-input-init>
+              <input
+                type="number"
+                style="background-color: white"
+                id="ftitlefs"
+                class="form-control number ftitlefs"
+                value="40"
+              />
+              <label class="form-label" for="ftitlefs">Front Title</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline" data-mdb-input-init>
+              <input
+                type="number"
+                style="background-color: white"
+                id="ftextfs"
+                class="form-control number ftextfs"
+                value="20"
+              />
+              <label class="form-label" for="ftextfs">Front Text</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline" data-mdb-input-init>
+              <input
+                type="number"
+                style="background-color: white"
+                id="btitlefs"
+                class="form-control number btitlefs"
+                value="40"
+              />
+              <label class="form-label" for="btitlefs">Back Title</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline" data-mdb-input-init>
+              <input
+                type="number"
+                style="background-color: white"
+                id="btextfs"
+                class="form-control number btextfs"
+                value="20"
+              />
+              <label class="form-label" for="btextfs">Back Text</label>
+            </div>
+          </div>
+        </div>
+        <hr style="margin-bottom: 5px; margin-top: 10px" />
+
+        <p style="font-size: 1.7em; margin-bottom: 0px">Extra Options</p>
+
+        <div class="row">
+          <div
+            class="col"
+            style="display: flex; align-items: center; justify-content: center"
+          >
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="click"
+                id="hover"
+                checked="checked"
+              />
+              <label class="form-check-label" for="hover">Hover</label>
+            </div>
+            <div
+              style="height: 1em; outline: 1px solid gray; margin: 10px"
+            ></div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="click"
+                id="click"
+              />
+              <label class="form-check-label" for="click">Click</label>
+            </div>
+            <div
+              style="height: 1em; outline: 1px solid gray; margin: 10px"
+            ></div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="click"
+                id="hold"
+              />
+              <label class="form-check-label" for="hold">Hold</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="col"
+            style="display: flex; align-items: center; justify-content: center"
+          >
+            <div class="align">
+              <button class="" id="left">
+                <span class="material-symbols-outlined">
+                  format_align_left
+                </span>
+              </button>
+              <button class="selected" id="center">
+                <span class="material-symbols-outlined">
+                  format_align_center
+                </span>
+              </button>
+              <button class="" id="right">
+                <span class="material-symbols-outlined">
+                  format_align_right
+                </span>
+              </button>
+            </div>
+            <div
+              style="height: 1em; outline: 1px solid gray; margin: 10px"
+            ></div>
+            <div class="vertical-align">
+              <button class="selected" id="top">
+                <span class="material-symbols-outlined">
+                  vertical_align_top
+                </span>
+              </button>
+              <button class="" id="middle">
+                <span class="material-symbols-outlined">
+                  vertical_align_center
+                </span>
+              </button>
+              <button class="" id="end">
+                <span class="material-symbols-outlined">
+                  vertical_align_bottom
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <hr style="margin-bottom: 10px; margin-top: 5px" />
       </form>
+      <button
+        class="btn btn-success"
+        data-mdb-ripple-init
+        data-mdb-ripple-color="light"
+        onclick="copied()"
+      >
+        <h2>
+          <span
+            class="material-symbols-outlined"
+            style="color: white; font-size: 1em"
+          >
+            content_copy
+          </span>
+          Copy Embed Code
+        </h2>
+      </button>
+      <div class="prev-cont">
+        <div class="prev" id="prev"></div>
+      </div>
       Made by <code>@ruskcoder</code>
     </div>
     <div id="snackbar">✔ Copied</div>
